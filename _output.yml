@@ -1,0 +1,12 @@
+bookdown::epub_book: default
+bookdown::gitbook:
+  css: style.css
+  split_by: "rmd"
+  config:
+    toc:
+      before: |
+        <li><a href="./">JPA2020 TWS-002 今日からできる再現可能な論文執筆</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+bookdown::pdf_book:
+  keep_tex: yes
