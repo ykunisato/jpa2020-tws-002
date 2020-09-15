@@ -1,6 +1,12 @@
 # 事前準備(Mac編)
 
-MacにおけるDockerの利用について
+## Dockerを用いたR解析環境構築＜簡単！＞
+
+Dockerの利用にあたって，パスワードなしにする。本質的には避けるべきだが，ユーザーがローカルで使用する分には，これでいい。
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
+```
 
 
 ## Dockerが使えない場合
