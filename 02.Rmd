@@ -2,13 +2,9 @@
 
 ## Dockerを用いたR解析環境構築＜簡単！＞
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qw5iVL8Zhek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-難波博士を参考にしつつWin homeとWin proでスクショを多用して，解説をつくる。
-https://susishushi.github.io/my_blog/post/docker_new/
-
-
-Dockerの利用にあたって，パスワードなしにする。本質的には避けるべきだが，ユーザーがローカルで使用する分には，これでいい(これはWin化する)。
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
