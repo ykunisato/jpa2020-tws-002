@@ -1,15 +1,41 @@
 # 事前準備(Windows編)
 
-## Dockerを用いたR解析環境構築＜簡単！＞
+## Dockerを用いたR解析環境構築
+
+### Windows10のエディションを確認する（ProかHomeか）
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qw5iVL8Zhek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+### Windows10がProエディションの場合の導入方法
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jbq4xfURMXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身用に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています。
 
 ```
-docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
+### Windows10がHomeエディションの場合の導入方法
 
+
+
+コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身用に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています。
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r
+```
 
 ## Dockerが使えない場合
+
+以下のソフトとパッケージをインストールください。
+
+### ソフト
+
+- R(https://www.r-project.org/)
+- Rstudio(https://rstudio.com/)
+
+### Rパッケージ
+
+デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。
