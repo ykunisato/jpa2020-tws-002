@@ -4,10 +4,14 @@
 
 ### Windows10のエディションを確認する（ProかHomeか）
 
+多くの方が，Windows10をお使いだとは思いますが，そのエディションによってDockerの導入方法が異なります。以下の解説どうかで，ご自身のパソコンのWindowsがProかHomeのどちらかをご確認ください。
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qw5iVL8Zhek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Windows10がProエディションの場合の導入方法
+
+Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbq4xfURMXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -19,7 +23,7 @@ docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/
 
 ### Windows10がHomeエディションの場合の導入方法
 
-
+Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。
 
 コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身用に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています。
 

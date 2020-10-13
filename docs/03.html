@@ -83,8 +83,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="03.html"><a href="03.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a><ul>
-<li class="chapter" data-level="4.1" data-path="03.html"><a href="03.html#dockerを用いたr解析環境構築簡単"><i class="fa fa-check"></i><b>4.1</b> Dockerを用いたR解析環境構築＜簡単！＞</a></li>
-<li class="chapter" data-level="4.2" data-path="02.html"><a href="02.html#dockerが使えない場合"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="4.1" data-path="02.html"><a href="02.html#dockerを用いたr解析環境構築"><i class="fa fa-check"></i><b>4.1</b> Dockerを用いたR解析環境構築</a></li>
+<li class="chapter" data-level="4.2" data-path="02.html"><a href="02.html#dockerが使えない場合"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="02.html"><a href="02.html#ソフト"><i class="fa fa-check"></i><b>4.2.1</b> ソフト</a></li>
+<li class="chapter" data-level="4.2.2" data-path="02.html"><a href="02.html#rパッケージ"><i class="fa fa-check"></i><b>4.2.2</b> Rパッケージ</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a><ul>
 <li class="chapter" data-level="5.1" data-path="04.html"><a href="04.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a><ul>
@@ -118,14 +121,29 @@
             <section class="normal" id="section-">
 <div id="事前準備mac編" class="section level1">
 <h1><span class="header-section-number">ch: 4</span> 事前準備(Mac編)</h1>
-<div id="dockerを用いたr解析環境構築簡単" class="section level2">
-<h2><span class="header-section-number">4.1</span> Dockerを用いたR解析環境構築＜簡単！＞</h2>
-<p>Dockerの利用にあたって，パスワードなしにする。本質的には避けるべきだが，ユーザーがローカルで使用する分には，これでいい。</p>
+<div id="dockerを用いたr解析環境構築" class="section level2">
+<h2><span class="header-section-number">4.1</span> Dockerを用いたR解析環境構築</h2>
+<p>Macユーザーの方は，以下の動画を参考にDockerを導入ください。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameは好みに変更ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 </div>
 <div id="dockerが使えない場合" class="section level2">
 <h2><span class="header-section-number">4.2</span> Dockerが使えない場合</h2>
+<p>以下のソフトとパッケージをインストールください。</p>
+<div id="ソフト" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> ソフト</h3>
+<ul>
+<li>R(<a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>)</li>
+<li>Rstudio(<a href="https://rstudio.com/" class="uri">https://rstudio.com/</a>)</li>
+</ul>
+</div>
+<div id="rパッケージ" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Rパッケージ</h3>
+<p>デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。</p>
 
+</div>
 </div>
 </div>
             </section>
