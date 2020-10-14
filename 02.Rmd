@@ -25,6 +25,8 @@ docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/
 
 Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ji9yLpATm5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身用に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています。
 
 ```
