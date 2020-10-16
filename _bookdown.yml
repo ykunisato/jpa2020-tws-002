@@ -1,10 +1,8 @@
 book_filename: "JPA2020-TWS-002"
-chapter_name: "ch: "
 output_dir: "docs"
 site: bookdown::bookdown_site
 delete_merged_file: true
 rmd_files:
-  - "index.Rmd"
   - "01.Rmd"
   - "02.Rmd"
   - "03.Rmd"
@@ -12,3 +10,5 @@ rmd_files:
   - "05.Rmd"
   - "06.Rmd"
   - "07.Rmd"
+  - "08.Rmd"
+  - "09.Rmd"

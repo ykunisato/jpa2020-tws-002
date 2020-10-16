@@ -1,2 +1,28 @@
-# 日本語論文を書こう
+# オマケ：renvでRパッケージのバージョン管理もしちゃおう！
+
+
+```
+mkdir renv
+```
+
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -e RENV_PATHS_CACHE=/home/rstudio/.local/share/renv/cache -p 8787:8787 -v $PWD:/home/rstudio -v $PWD/renv:/home/rstudio/.local/share/renv/cache -d --name paper ykunisato/paper-r
+```
+
+```
+renv::init()
+```
+
+```
+renv::snapshot()
+```
+
+
+```
+> renv::snapshot()
+* The lockfile is already up to date.
+```
+
+
 

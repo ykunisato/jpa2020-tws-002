@@ -1,2 +1,16 @@
-# Rmarkdownで英語論文を書いてみよう！
+# 事前準備(その他)
 
+## 文献管理ソフト
+
+
+
+- Paperpile
+
+- Zotero
+
+dockerではzotero connectionは使えない（あとそうじゃなくても使えるまでの設定がややこしい）。今回は，シンプルさを重視して，あくまで文献の管理とbibtexの出力ソフトという位置づけにしておく。
+
+
+## Githubアカウント
+
+https://kunisatolab.github.io/main/how-to-github.html
