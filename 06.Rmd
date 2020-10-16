@@ -1,18 +1,31 @@
-# オマケ：renvでRパッケージのバージョン管理もしちゃおう！
+# 上級者向け：renvでRパッケージのバージョン管理もしちゃおう！
 
+Dockerは環境の再現性においては有用ですが，Rパッケージのバージョン管理を細かく実施できるものではないです。そのため，プロジェクトによってパッケージのバージョンを変えないといけないような状況においては（一部古いパッケージを使う必要があるプロジェクトとか），Rのバージョン管理ソフトのrenvを使います。詳しくは，terashim.comさんの[renv と Docker の相互運用パターン](https://terashim.com/posts/renv-docker-patterns/)を参照ください。renv自体の使い方は，okiyuki99さんの[Rのパッケージ管理のためのrenvの使い方](https://qiita.com/okiyuki99/items/688a00ca9a58e42e3bfa)を参照ください。以下ではその概要のみを記載します（また，上級者用なので，Macユーザーの利用に限定して解説します）。
+
+## renvをdockerで利用する準備
+
+terashim.comさんの[renv と Docker の相互運用パターン](https://terashim.com/posts/renv-docker-patterns/)の「外付けパッケージキャッシュパターン
+」を採用します。
+
+まずは，パッケージキャッシュを置くフォルダをホスト側に用意します。
 
 ```
 mkdir renv
 ```
 
+そして，以下を実行します。RENV_PATHS_CACHEと上記でつくったrenvフォルダをマウントするコードが追加されています。
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -e RENV_PATHS_CACHE=/home/rstudio/.local/share/renv/cache -p 8787:8787 -v $PWD:/home/rstudio -v $PWD/renv:/home/rstudio/.local/share/renv/cache -d --name paper ykunisato/paper-r
 ```
 
+Dockerが立ち上がったら，プロジェクトファイルを使って解析を進めます。個人的な意見ですが，かなり解析が進んで使うべきパッケージが固定してくるくらいまで進めます（というのは，以下のrenv::init()を実行すると，プライベートライブラリ内が現在使っているパッケージだけになります。そうするとせっかくDockerでたくさんパッケージをいれているのが無駄になります。なので，ある程度解析が進んでからという感じです）。そこで，以下を実行します。現在使っているパッケージにしぼって，さらにそのバージョン情報とファイルを保存してくれます。
+
 ```
 renv::init()
 ```
+
+この説明資料を作っている際のプロジェクトで実行した結果は以下になります。使っているパッケージのバージョンなどが記録されています。
 
 ```
 > renv::init()
@@ -29,16 +42,23 @@ The following package(s) will be updated in the lockfile:
 - bookdown    [* -> 0.21]
 ```
 
+なお，作業をしていて，パッケージが追加されたりしたら，以下を実行して，追加します。
 
 ```
 renv::snapshot()
 ```
 
+なお，新しいパッケージを追加せずに実行すると，以下のようになります。ちなみに，パッケージのバージョンなどのは，renv.lockファイルに記録されます。
 
 ```
 > renv::snapshot()
 * The lockfile is already up to date.
 ```
 
+上記のようにenv.lockファイルや関連するフォルダにパッケージの情報が記録されていれば，別の解析環境において，以下を実行することで，上記と全く同じバージョンのRパッケージを用意することができます。
+
+```
+renv::restore()
+```
 
 
