@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 オマケ：renvでRパッケージのバージョン管理もしちゃおう！ | 今日からできる再現可能な論文執筆</title>
-  <meta name="description" content="6 オマケ：renvでRパッケージのバージョン管理もしちゃおう！ | 今日からできる再現可能な論文執筆" />
+  <title>9 ウェブサイトやスライドを作ろう! | 今日からできる再現可能な論文執筆</title>
+  <meta name="description" content="9 ウェブサイトやスライドを作ろう! | 今日からできる再現可能な論文執筆" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 オマケ：renvでRパッケージのバージョン管理もしちゃおう！ | 今日からできる再現可能な論文執筆" />
+  <meta property="og:title" content="9 ウェブサイトやスライドを作ろう! | 今日からできる再現可能な論文執筆" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 オマケ：renvでRパッケージのバージョン管理もしちゃおう！ | 今日からできる再現可能な論文執筆" />
+  <meta name="twitter:title" content="9 ウェブサイトやスライドを作ろう! | 今日からできる再現可能な論文執筆" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="05.html"/>
-<link rel="next" href="07.html"/>
+<link rel="prev" href="08.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -121,35 +121,25 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="オマケrenvでrパッケージのバージョン管理もしちゃおう" class="section level1">
-<h1><span class="header-section-number">6</span> オマケ：renvでRパッケージのバージョン管理もしちゃおう！</h1>
-<pre><code>mkdir renv</code></pre>
-<pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -e RENV_PATHS_CACHE=/home/rstudio/.local/share/renv/cache -p 8787:8787 -v $PWD:/home/rstudio -v $PWD/renv:/home/rstudio/.local/share/renv/cache -d --name paper ykunisato/paper-r</code></pre>
-<pre><code>renv::init()</code></pre>
-<pre><code>&gt; renv::init()
-* Initializing project ...
-* Discovering package dependencies ... Done!
-* Copying packages into the cache ... [19/19] Done!
-The following package(s) will be updated in the lockfile:
-
-# GitHub =============================
-- renv        [* -&gt; rstudio/renv@HEAD]
-
-# RSPM ===============================
-- base64enc   [* -&gt; 0.1-3]
-- bookdown    [* -&gt; 0.21]</code></pre>
-<pre><code>renv::snapshot()</code></pre>
-<pre><code>&gt; renv::snapshot()
-* The lockfile is already up to date.</code></pre>
+<div id="ウェブサイトやスライドを作ろう" class="section level1">
+<h1><span class="header-section-number">9</span> ウェブサイトやスライドを作ろう!</h1>
+<p>TWS当日(2020/10/31(土) 10:00-12:00)に解説します。</p>
 
 </div>
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="05.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="07.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="08.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

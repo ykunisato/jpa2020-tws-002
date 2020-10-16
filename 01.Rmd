@@ -1,4 +1,0 @@
-# 事前準備（Dockerとrenvとは）
-
-Dockerとrenvを用いた環境構築の概要説明
-

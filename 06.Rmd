@@ -1,2 +1,44 @@
-# 日本語論文を書こう
+# オマケ：renvでRパッケージのバージョン管理もしちゃおう！
+
+
+```
+mkdir renv
+```
+
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -e RENV_PATHS_CACHE=/home/rstudio/.local/share/renv/cache -p 8787:8787 -v $PWD:/home/rstudio -v $PWD/renv:/home/rstudio/.local/share/renv/cache -d --name paper ykunisato/paper-r
+```
+
+```
+renv::init()
+```
+
+```
+> renv::init()
+* Initializing project ...
+* Discovering package dependencies ... Done!
+* Copying packages into the cache ... [19/19] Done!
+The following package(s) will be updated in the lockfile:
+
+# GitHub =============================
+- renv        [* -> rstudio/renv@HEAD]
+
+# RSPM ===============================
+- base64enc   [* -> 0.1-3]
+- bookdown    [* -> 0.21]
+```
+
+
+```
+renv::snapshot()
+```
+
+
+```
+> renv::snapshot()
+* The lockfile is already up to date.
+```
+
+
 
