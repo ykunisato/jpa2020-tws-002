@@ -134,7 +134,7 @@
 <div id="rocker-rとrstudio用のdocker" class="section level2">
 <h2><span class="header-section-number">2.3</span> Rocker: RとRstudio用のDocker</h2>
 <p>今回の場合は，OS(Ubuntsと呼ばれるLinux)とソフト（RとIDEのRStudio）とRパッケージをまとめたコンテナを使います。自作もできますが，結構大変ですので，既に公開されているものを使います。RやRstudio用のDockerコンテナをつくるRockerプロジェクト(<a href="https://hub.docker.com/u/rocker" class="uri">https://hub.docker.com/u/rocker</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>が公開したイメージが便利なので，今回のTWSでも使用します。</p>
-<p>Rockerプロジェクト<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>でも十分なのですが，よく使うパッケージなどは事前に入れられていると便利です。特にベイズ統計で用いるRstanなどはインストールがちょっと面倒なので，事前にそれらが入っていると便利かと思います。そこで，私は心理学で使いそうなRでパッケージをRockerプロジェクトのVerseというコンテナにたくさん追加した自作Dockerイメージ(ykunisato/paper-r)を作って公開しています(<a href="https://hub.docker.com/u/ykunisato" class="uri">https://hub.docker.com/u/ykunisato</a>)。今回のTWSでは，私が作成したpaper-rというDockerイメージを使います。</p>
+<p>Rockerプロジェクトでも十分なのですが，よく使うパッケージなどは事前に入れられていると便利です。特にベイズ統計で用いるRstanなどはインストールがちょっと面倒なので，事前にそれらが入っていると便利かと思います。そこで，私は心理学で使いそうなRでパッケージをRockerプロジェクトのVerseというコンテナにたくさん追加した自作Dockerイメージ(ykunisato/paper-r)を作って公開しています(<a href="https://hub.docker.com/u/ykunisato" class="uri">https://hub.docker.com/u/ykunisato</a>)。今回のTWSでは，私が作成したpaper-rというDockerイメージを使います。</p>
 </div>
 <div id="統計解析でdockerを導入する利点" class="section level2">
 <h2><span class="header-section-number">2.4</span> 統計解析でDockerを導入する利点</h2>
@@ -153,7 +153,6 @@
 <hr />
 <ol start="1">
 <li id="fn1"><p>Nüst, D., Eddelbuettel, D., Bennett, D., Cannoodt, R., Clark, D., Daróczi, G., Edmondson, M., Fay, C., Hughes, E., Kjeldgaard, L., Lopp, S., Marwick, B., Nolis, H., Nolis, J., Ooi, H., Ram, K., Ross, N., Shepherd, L., Sólymos, P., … Xiao, N. (2020). The Rockerverse: Packages and Applications for Containerisation with R. The R Journal, 12(1), 437.<a href="02.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Nüst, D., Eddelbuettel, D., Bennett, D., Cannoodt, R., Clark, D., Daróczi, G., Edmondson, M., Fay, C., Hughes, E., Kjeldgaard, L., Lopp, S., Marwick, B., Nolis, H., Nolis, J., Ooi, H., Ram, K., Ross, N., Shepherd, L., Sólymos, P., … Xiao, N. (2020). The Rockerverse: Packages and Applications for Containerisation with R. The R Journal, 12(1), 437.<a href="02.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
