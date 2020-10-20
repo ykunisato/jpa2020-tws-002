@@ -9,7 +9,7 @@ Macユーザーの方は，以下の動画を参考にDockerを導入くださ�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameは好みに変更ください）。
+ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameの=以降は，好みによって変更ください）。
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
@@ -23,4 +23,4 @@ Windowsとは違いMacの場合は，普段使っているホームディレク�
 
 - R(https://www.r-project.org/)
 - Rstudio(https://rstudio.com/)
-- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。
+- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 事前準備（Dockerとは） | 今日からできる再現可能な論文執筆</title>
   <meta name="description" content="2 事前準備（Dockerとは） | 今日からできる再現可能な論文執筆" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 事前準備（Dockerとは） | 今日からできる再現可能な論文執筆" />
   <meta property="og:type" content="book" />
@@ -21,7 +21,7 @@
   
   
 
-<meta name="author" content="国里愛彦(専修大学)・竹林由武（福島県立医科大学）" />
+<meta name="author" content="国里愛彦(専修大学)・竹林由武(福島県立医科大学)" />
 
 
 
@@ -87,7 +87,7 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a><ul>
 <li class="chapter" data-level="4.1" data-path="04.html"><a href="04.html#macへのdockerの導入方法"><i class="fa fa-check"></i><b>4.1</b> MacへのDockerの導入方法</a></li>
-<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="4.2" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="05.html"><a href="05.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a><ul>
 <li class="chapter" data-level="5.1" data-path="05.html"><a href="05.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a></li>
@@ -123,18 +123,18 @@
 <h1><span class="header-section-number">2</span> 事前準備（Dockerとは）</h1>
 <div id="解析環境の違うと結果が再現しない" class="section level2">
 <h2><span class="header-section-number">2.1</span> 解析環境の違うと結果が再現しない？</h2>
-<p>コンピュータが計算するものは正しそうに見えますが，Rを含む統計ソフトが返す結果はいつでも一貫しているとは限りません。例えば，コンピュータのOSの種類，統計解析ソフトのバージョン，Rの場合はパッケージのバージョンによって出力される結果は異なることがあります。最近は，データや解析コードの公開が進んできています。しかし，このような統計解析を実行する環境の違いが，再現性を低めている可能性があります。</p>
+<p>コンピュータが計算するものは正しそうに見えますが，Rを含む統計ソフトが返す結果がいつでも一致するとは限りません。例えば，コンピュータのOSの種類，統計解析ソフトのバージョン，Rの場合はパッケージのバージョンによって出力される結果は異なることがあります。最近は，データや解析コードの公開が進んできています。しかし，このような統計解析を実行する環境の違いが，再現性を低めている可能性もあります。</p>
 </div>
 <div id="dockerでコードだけでなく解析環境の再現性も保つ" class="section level2">
 <h2><span class="header-section-number">2.2</span> Dockerでコードだけでなく解析環境の再現性も保つ</h2>
-<p>解析環境の再現性のために，データやコードを公開・共有するだけでなく，解析環境やバージョン情報も公開する必要があります。ただ，なかなか公開するだけだと，論文作成時と同じ解析環境を作るのは難しかったりします。例えば，古いOSで動作するソフトじゃないと解析が再現できない場合，そのOSやソフトを用意するのは難しいかもしれません（実際，研究でつかわれたプログラムが公開されていたが，現在使われているOSでは動作せず，古いOSも用意することが不可能なことがありました）。</p>
-<p>OSとソフト（Rの場合はパッケージも）をまとめて配布できると解析環境の再現性が担保できるかもしれません。WindowsやMacの場合は難しいですが，Linux上で動作するようなソフトの場合は，OSとソフトを含んだものをまとめて（まとめたものをコンテナといいます）配布することもできます。このような，OSに依存せずに，Linuxベースのアプリケーションをコンテナ化する技術をDockerと呼びます。以下の図のように，Dockerを使うとOSとソフトをまとめたコンテナをイメージとして配布可能になります。配布が可能ということは，統計解析環境の共有も可能になります。そして，Docker Hub(<a href="https://hub.docker.com/" class="uri">https://hub.docker.com/</a> )では，多数のイメージが公開されているので，興味のあるものを使うことができます。</p>
+<p>解析環境の再現性のために，データやコードを公開・共有するだけでなく，解析環境やバージョン情報も公開する必要があります。ただ，なかなか公開するだけだと，論文作成時と同じ解析環境を作るのは難しかったりします。例えば，古いOSで動作するソフトじゃないと解析が再現できない場合，そのOSやソフトを用意するのは難しいかもしれません（実際，研究でつかわれたプログラムが公開されていたが，現在使われているOSでは動作せず，かといって古いOSを用意することも不可能なことがありました）。</p>
+<p>OSとソフト（Rの場合はパッケージも）をまとめて配布できると解析環境の再現性が担保できるかもしれません。WindowsやMacの場合は難しいですが，Linux上で動作するようなソフトの場合は，OSとソフトを含んだものをまとめて（まとめたものをコンテナといいます），配布することもできます。このような，OSに依存せずに，Linuxベースのアプリケーションをコンテナ化する技術をDockerと呼びます。以下の図のように，Dockerを使うとOSとソフトをまとめたコンテナをイメージとして配布可能になります。配布が可能ということは，統計解析環境の共有も可能になります。そして，Docker Hub(<a href="https://hub.docker.com/" class="uri">https://hub.docker.com/</a> )では，多数のイメージが公開されています。ご自身の関心に合わせて，便利なDockerイメージをご利用いただけます。</p>
 <p><img src="fig/docker.png" width="500"></p>
 </div>
 <div id="rocker-rとrstudio用のdocker" class="section level2">
 <h2><span class="header-section-number">2.3</span> Rocker: RとRstudio用のDocker</h2>
 <p>今回の場合は，OS(Ubuntsと呼ばれるLinux)とソフト（RとIDEのRStudio）とRパッケージをまとめたコンテナを使います。自作もできますが，結構大変ですので，既に公開されているものを使います。RやRstudio用のDockerコンテナをつくるRockerプロジェクト(<a href="https://hub.docker.com/u/rocker" class="uri">https://hub.docker.com/u/rocker</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>が公開したイメージが便利なので，今回のTWSでも使用します。</p>
-<p>Rockerプロジェクトでも十分なのですが，よく使うパッケージなどは事前に入れられていると便利です。特にベイズ統計で用いるRstanなどはインストールがちょっと面倒なので，事前にそれらが入っていると便利かと思います。そこで，私は心理学で使いそうなRでパッケージをRockerプロジェクトのVerseというコンテナにたくさん追加した自作Dockerイメージ(ykunisato/paper-r)を作って公開しています(<a href="https://hub.docker.com/u/ykunisato" class="uri">https://hub.docker.com/u/ykunisato</a>)。今回のTWSでは，私が作成したpaper-rというDockerイメージを使います。</p>
+<p>Rockerプロジェクトでも十分なのですが，よく使うパッケージなどは事前に入れられていると便利です。特にベイズ統計で用いるRstanなどはインストールがちょっと面倒なので，事前にそれらが入っていると便利かと思います（特にMarkdownでのPDF出力まわりやRStanなどが事前に入っていると便利です）。そこで，私は心理学で使いそうなRでパッケージを，RockerプロジェクトのVerseというコンテナにたくさん追加した自作Dockerイメージ(ykunisato/paper-r)を作って公開しています(<a href="https://hub.docker.com/u/ykunisato" class="uri">https://hub.docker.com/u/ykunisato</a>)。今回のTWSでは，私が作成したpaper-rというDockerイメージを使います。</p>
 </div>
 <div id="統計解析でdockerを導入する利点" class="section level2">
 <h2><span class="header-section-number">2.4</span> 統計解析でDockerを導入する利点</h2>

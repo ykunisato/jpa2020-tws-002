@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 事前準備(Windows編) | 今日からできる再現可能な論文執筆</title>
   <meta name="description" content="3 事前準備(Windows編) | 今日からできる再現可能な論文執筆" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 事前準備(Windows編) | 今日からできる再現可能な論文執筆" />
   <meta property="og:type" content="book" />
@@ -21,7 +21,7 @@
   
   
 
-<meta name="author" content="国里愛彦(専修大学)・竹林由武（福島県立医科大学）" />
+<meta name="author" content="国里愛彦(専修大学)・竹林由武(福島県立医科大学)" />
 
 
 
@@ -87,7 +87,7 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a><ul>
 <li class="chapter" data-level="4.1" data-path="04.html"><a href="04.html#macへのdockerの導入方法"><i class="fa fa-check"></i><b>4.1</b> MacへのDockerの導入方法</a></li>
-<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="4.2" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="05.html"><a href="05.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a><ul>
 <li class="chapter" data-level="5.1" data-path="05.html"><a href="05.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a></li>
@@ -121,7 +121,7 @@
             <section class="normal" id="section-">
 <div id="事前準備windows編" class="section level1">
 <h1><span class="header-section-number">3</span> 事前準備(Windows編)</h1>
-<p>それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の「4 事前準備（Mac編）」をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。</p>
+<p>それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の<a href="https://ykunisato.github.io/jpa2020-tws-002/04.html">「4 事前準備（Mac編）」</a>をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。</p>
 <div id="windows10のエディションを確認するproかhomeか" class="section level2">
 <h2><span class="header-section-number">3.1</span> Windows10のエディションを確認する（ProかHomeか）</h2>
 <p>多くの方が，Windows10をお使いだとは思いますが，一般的に使われるWindowsにはProとHomeの２つのエディションがあります。エディションによってDockerの導入方法が異なります。以下の解説動画で，ご自身のパソコンのWindowsがProかHomeのどちらかをご確認ください。</p>
@@ -134,7 +134,7 @@
 <p>Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbq4xfURMXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。</p>
+<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 <p>ちょっとファイル・フォルダの話を書いておくと，DockerのコンテナはWindowsとは独立してパソコン内に存在するので，Windowsとコンテナでファイルやフォルダを共有する場合は，上記の-vで指定する必要があります。そして，上記のように，/c/user/XXXXX/Documentをしていますので，DockerのRStudio上でのファイルは/c/user/XXXXX/Document内にあります。これは，普段使っている/c/ユーザー/XXXX/ドキュメントとは異なるのでご注意ください。</p>
 <p><br /></p>
@@ -144,7 +144,7 @@
 <p>Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ji9yLpATm5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。</p>
+<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 <p>ちょっとファイル・フォルダの話を書いておくと，DockerのコンテナはWindowsとは独立してパソコン内に存在するので，Windowsとコンテナでファイルやフォルダを共有する場合は，上記の-vで指定する必要があります。そして，上記のように，/c/user/XXXXX/Documentをしていますので，DockerのRStudio上でのファイルは/c/user/XXXXX/Document内にあります。これは，普段使っている/c/ユーザー/XXXX/ドキュメントとは異なるのでご注意ください。</p>
 <p><br /></p>
@@ -153,7 +153,7 @@
 <h2><span class="header-section-number">3.4</span> WindowsPCを複数人で共有する場合</h2>
 <p>Dockerで走らせているRStudio serverは同一PC内で共有されているようです。なので，Aという人がDockerで動かしているRStudio serverで作業した内容を別のユーザーBも見れます。研究室においているWindows PCなどは，複数ユーザーがログインできるようになっているかもしれないので気をつける必要があります。この場合は以下の２つの対処法があります。</p>
 <ul>
-<li><p>RStudio serverへのログインをユーザーごとにできるようにする。詳しくは，<a href="https://kunisatolab.github.io/main/how-to-docker-compose-https.html#Tips:_Rstudio%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E8%BF%BD%E5%8A%A0">Tips: Rstudioのユーザー追加</a>で紹介していますが，RStudio serverでは複数ユーザーのアカウントを作成できます。これで，そのパソコンにログインしたユーザーは，自分のIDとパスでRStudio serverにログインできます。</p></li>
+<li><p>RStudio serverへのログインをユーザーごとにできるようにする。詳しくは，<a href="https://kunisatolab.github.io/main/how-to-docker-compose-https.html#Tips:_Rstudio%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E8%BF%BD%E5%8A%A0">Tips: Rstudioのユーザー追加</a>で紹介していますが，RStudio serverでは複数ユーザーのアカウントを作成できます。これで，そのパソコンにログインしたユーザーは，自分のIDとパスでRStudio serverにログインできます。またDocker作成時にDISABLE_AUTH=trueはとっておいてください。</p></li>
 <li><p>Dockerを使ってクラウドもしくは自分のサーバーにRStudio serverを設置して使う。研究室の場合，学生はブラウザからそのサーバーにアクセスしてログインして解析や執筆をします（サーバー上にデータを置くので匿名化や同意取得時の説明などが必要ではあります）。詳しくは，<a href="https://kunisatolab.github.io/main/how-to-docker-compose-https.html#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">Docker-composeを使ってGCE上の複数のサービス(Rstudio, Jupyter notebook, JATOS, elabFTW)をHTTPS化する方法</a>で説明をしています。個人的には，Dockerを使うメリットの１つとして，サーバーの管理が便利というのがあります（元々そのために開発されたものでもあります）。</p></li>
 </ul>
 </div>
@@ -163,7 +163,7 @@
 <ul>
 <li>R(<a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>)</li>
 <li>Rstudio(<a href="https://rstudio.com/" class="uri">https://rstudio.com/</a>)</li>
-<li>私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。</li>
+<li>私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。</li>
 </ul>
 
 </div>
