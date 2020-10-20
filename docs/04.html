@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 事前準備(Mac編) | 今日からできる再現可能な論文執筆</title>
   <meta name="description" content="4 事前準備(Mac編) | 今日からできる再現可能な論文執筆" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 事前準備(Mac編) | 今日からできる再現可能な論文執筆" />
   <meta property="og:type" content="book" />
@@ -87,7 +87,7 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a><ul>
 <li class="chapter" data-level="4.1" data-path="04.html"><a href="04.html#macへのdockerの導入方法"><i class="fa fa-check"></i><b>4.1</b> MacへのDockerの導入方法</a></li>
-<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="4.2" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="05.html"><a href="05.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a><ul>
 <li class="chapter" data-level="5.1" data-path="05.html"><a href="05.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a></li>
@@ -127,17 +127,17 @@
 <p>Macユーザーの方は，以下の動画を参考にDockerを導入ください。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameは好みに変更ください）。</p>
+<p>ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameの=以降は，好みによって変更ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 <p>Windowsとは違いMacの場合は，普段使っているホームディレクトリがマウントされていると思います。普通にMacのファイル情報にアクセスできるので使うのに違和感もないかもしれません。</p>
 </div>
-<div id="dockerが使えない場合-1" class="section level2">
+<div id="dockerが使えない場合" class="section level2">
 <h2><span class="header-section-number">4.2</span> Dockerが使えない場合</h2>
 <p>以下のソフトとパッケージをインストールください。</p>
 <ul>
 <li>R(<a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>)</li>
 <li>Rstudio(<a href="https://rstudio.com/" class="uri">https://rstudio.com/</a>)</li>
-<li>私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。</li>
+<li>私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。</li>
 </ul>
 
 </div>

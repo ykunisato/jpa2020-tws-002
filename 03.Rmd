@@ -1,6 +1,6 @@
 # 事前準備(Windows編)
 
-それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の「4 事前準備（Mac編）」をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。
+それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の[「4 事前準備（Mac編）」](https://ykunisato.github.io/jpa2020-tws-002/04.html)をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。
 
 
 ## Windows10のエディションを確認する（ProかHomeか）
@@ -17,7 +17,7 @@ Windows10 Proエディションの方は以下の動画を参考にDockerを導�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbq4xfURMXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。
+コマンドプロンプトに打ち込むDocker用のコードは以下になります(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r
@@ -33,7 +33,7 @@ Windows10 Homeエディションの方は以下の動画を参考にDockerを導
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ji9yLpATm5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-コマンドプロンプトに打ち込むDocker用のコード(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。
+コマンドプロンプトに打ち込むDocker用のコードは以下になります(XXXXXの部分はご自身のアカウント名に改変ください)。ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（これも気になる場合は改変ください）。
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/Document:/home/rstudio -d --name paper ykunisato/paper-r
@@ -47,7 +47,7 @@ docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v /c/user/XXXXX/
 
 Dockerで走らせているRStudio serverは同一PC内で共有されているようです。なので，Aという人がDockerで動かしているRStudio serverで作業した内容を別のユーザーBも見れます。研究室においているWindows PCなどは，複数ユーザーがログインできるようになっているかもしれないので気をつける必要があります。この場合は以下の２つの対処法があります。
 
-- RStudio serverへのログインをユーザーごとにできるようにする。詳しくは，[Tips: Rstudioのユーザー追加](https://kunisatolab.github.io/main/how-to-docker-compose-https.html#Tips:_Rstudio%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E8%BF%BD%E5%8A%A0)で紹介していますが，RStudio serverでは複数ユーザーのアカウントを作成できます。これで，そのパソコンにログインしたユーザーは，自分のIDとパスでRStudio serverにログインできます。
+- RStudio serverへのログインをユーザーごとにできるようにする。詳しくは，[Tips: Rstudioのユーザー追加](https://kunisatolab.github.io/main/how-to-docker-compose-https.html#Tips:_Rstudio%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E8%BF%BD%E5%8A%A0)で紹介していますが，RStudio serverでは複数ユーザーのアカウントを作成できます。これで，そのパソコンにログインしたユーザーは，自分のIDとパスでRStudio serverにログインできます。またDocker作成時にDISABLE_AUTH=trueはとっておいてください。
 
 - Dockerを使ってクラウドもしくは自分のサーバーにRStudio serverを設置して使う。研究室の場合，学生はブラウザからそのサーバーにアクセスしてログインして解析や執筆をします（サーバー上にデータを置くので匿名化や同意取得時の説明などが必要ではあります）。詳しくは，[Docker-composeを使ってGCE上の複数のサービス(Rstudio, Jupyter notebook, JATOS, elabFTW)をHTTPS化する方法
 ](https://kunisatolab.github.io/main/how-to-docker-compose-https.html#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)で説明をしています。個人的には，Dockerを使うメリットの１つとして，サーバーの管理が便利というのがあります（元々そのために開発されたものでもあります）。
@@ -58,4 +58,4 @@ Dockerで走らせているRStudio serverは同一PC内で共有されている�
 
 - R(https://www.r-project.org/)
 - Rstudio(https://rstudio.com/)
-- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモのコードを実施した場合にインストールするか聞かれるので，その都度インストールください。
+- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。
