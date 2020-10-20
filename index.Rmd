@@ -12,6 +12,10 @@ documentclass: book
 
 本サイトは，日本心理学会第84回大会(以下，JPA2020)のチュートリアルワークショップ(以下，TWS)002「今日からできる再現可能な論文執筆」の事前準備と当日の演習用サイトになります。本サイトもRStudioとRMarkdown(Bookdown)を使って作成されています。左の目次をクリックして移動するか，＞をクリックして次のページに移動ください。
 
+## 連絡先
+
+本サイトの内容で不明な点がございましたら，[メールフォーム](https://docs.google.com/forms/d/e/1FAIpQLSeVb0_ti9flHyGcRQcLESQO7Tzl3eH5hbCqXyzcGh7RWLQexA/viewform)からご連絡をいただけましたら幸いです。
+
 ## TWS概要
 
 TWSの概要は以下になります。
