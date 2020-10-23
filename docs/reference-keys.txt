@@ -10,7 +10,7 @@ rocker-rとrstudio用のdocker
 windows10のエディションを確認するproかhomeか
 windows10がproエディションの場合の導入方法
 windows10がhomeエディションの場合の導入方法
-windowspcを複数人で共有する場合
+dockerが起動していない場合
 dockerが使えない場合
 事前準備mac編
 macへのdockerの導入方法
