@@ -15,7 +15,7 @@ Macユーザーの方は，以下の動画を参考にDockerを導入くださ�
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
-Windowsとは違いMacの場合は，普段使っているホームディレクトリがマウントされていると思います。普通にMacのファイル情報にアクセスできるので使うのに違和感もないかもしれません。
+普段使っているホームディレクトリがマウントされていると思います。
 
 ## Dockerが使えない場合
 
