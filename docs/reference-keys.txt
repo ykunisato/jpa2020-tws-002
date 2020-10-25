@@ -26,8 +26,8 @@ githubアカウント
 上級者向けrenvでrパッケージのバージョン管理もしちゃおう
 renvをdockerで利用する準備
 rmarkdownで英語論文を書いてみよう
-日本語論文を書こう
+rmarkdownで日本語論文を書いてみよう
 jparmdのインストール
 research-compendium
 日本語論文をr-markdownで書いてみよう
-ウェブサイトやスライドを作ろう
+rmarkdownでウェブサイトやスライドを作ろう
