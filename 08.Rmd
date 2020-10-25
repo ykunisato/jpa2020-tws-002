@@ -1,8 +1,8 @@
-# Rmarkdownで日本語論文を書いてみよう！
+# R Markdownで日本語論文を書いてみよう！
 
 ## jpaRmdのインストール
 
-以下の方法でjpaRmdのインストールをお願いいたします(dockerのpaper-rをお使いの場合は，既に入っています)。
+以下の方法でjpaRmdのインストールをお願いいたします(dockerのykunisato/paper-rをお使いの場合は，既に入っています)。
 
 ```{r eval=FALSE}
 # install.packages("remotes")
