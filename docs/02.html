@@ -50,8 +50,74 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -82,14 +148,20 @@
 <li class="chapter" data-level="3" data-path="03.html"><a href="03.html"><i class="fa fa-check"></i><b>3</b> 事前準備(Windows編)</a><ul>
 <li class="chapter" data-level="3.1" data-path="03.html"><a href="03.html#windows10のエディションを確認するproかhomeか"><i class="fa fa-check"></i><b>3.1</b> Windows10のエディションを確認する（ProかHomeか）</a></li>
 <li class="chapter" data-level="3.2" data-path="03.html"><a href="03.html#windows10がproエディションの場合の導入方法"><i class="fa fa-check"></i><b>3.2</b> Windows10がProエディションの場合の導入方法</a></li>
-<li class="chapter" data-level="3.3" data-path="03.html"><a href="03.html#windows10がhomeエディションの場合の導入方法"><i class="fa fa-check"></i><b>3.3</b> Windows10がHomeエディションの場合の導入方法</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="03.html"><a href="03.html#dockerが起動していない場合"><i class="fa fa-check"></i><b>3.3.1</b> Dockerが起動していない場合</a></li>
+<li class="chapter" data-level="3.3" data-path="03.html"><a href="03.html#windows10がhomeエディションの場合の導入方法"><i class="fa fa-check"></i><b>3.3</b> Windows10がHomeエディションの場合の導入方法</a></li>
+<li class="chapter" data-level="3.4" data-path="03.html"><a href="03.html#dockerコマンド"><i class="fa fa-check"></i><b>3.4</b> Dockerコマンド</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="03.html"><a href="03.html#コンテナの確認と開始"><i class="fa fa-check"></i><b>3.4.1</b> コンテナの確認と開始</a></li>
+<li class="chapter" data-level="3.4.2" data-path="03.html"><a href="03.html#コンテナの停止と削除イメージの削除"><i class="fa fa-check"></i><b>3.4.2</b> コンテナの停止と削除，イメージの削除</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>3.4</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="3.5" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>3.5</b> Dockerが使えない場合</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a><ul>
 <li class="chapter" data-level="4.1" data-path="04.html"><a href="04.html#macへのdockerの導入方法"><i class="fa fa-check"></i><b>4.1</b> MacへのDockerの導入方法</a></li>
-<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.2</b> Dockerが使えない場合</a></li>
+<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerコマンド-1"><i class="fa fa-check"></i><b>4.2</b> Dockerコマンド</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="04.html"><a href="04.html#コンテナの確認と開始-1"><i class="fa fa-check"></i><b>4.2.1</b> コンテナの確認と開始</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04.html"><a href="04.html#コンテナの停止と削除イメージの削除-1"><i class="fa fa-check"></i><b>4.2.2</b> コンテナの停止と削除，イメージの削除</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.3</b> Dockerが使えない場合</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="05.html"><a href="05.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a><ul>
 <li class="chapter" data-level="5.1" data-path="05.html"><a href="05.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a></li>
@@ -99,7 +171,11 @@
 <li class="chapter" data-level="6.1" data-path="06.html"><a href="06.html#renvをdockerで利用する準備"><i class="fa fa-check"></i><b>6.1</b> renvをdockerで利用する準備</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="07.html"><a href="07.html"><i class="fa fa-check"></i><b>7</b> Rmarkdownで英語論文を書いてみよう！</a></li>
-<li class="chapter" data-level="8" data-path="08.html"><a href="08.html"><i class="fa fa-check"></i><b>8</b> 日本語論文を書こう！</a></li>
+<li class="chapter" data-level="8" data-path="08.html"><a href="08.html"><i class="fa fa-check"></i><b>8</b> 日本語論文を書こう！</a><ul>
+<li class="chapter" data-level="8.1" data-path="08.html"><a href="08.html#jparmdのインストール"><i class="fa fa-check"></i><b>8.1</b> jpaRmdのインストール</a></li>
+<li class="chapter" data-level="8.2" data-path="08.html"><a href="08.html#research-compendium"><i class="fa fa-check"></i><b>8.2</b> Research Compendium</a></li>
+<li class="chapter" data-level="8.3" data-path="08.html"><a href="08.html#日本語論文をr-markdownで書いてみよう"><i class="fa fa-check"></i><b>8.3</b> 日本語論文をR Markdownで書いてみよう！</a></li>
+</ul></li>
 <li class="chapter" data-level="9" data-path="09.html"><a href="09.html"><i class="fa fa-check"></i><b>9</b> ウェブサイトやスライドを作ろう!</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
