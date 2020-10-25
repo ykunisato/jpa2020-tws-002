@@ -25,9 +25,9 @@ dockerが使えない場合-1
 githubアカウント
 上級者向けrenvでrパッケージのバージョン管理もしちゃおう
 renvをdockerで利用する準備
-rmarkdownで英語論文を書いてみよう
-日本語論文を書こう
+r-markdownで英語論文を書いてみよう
+r-markdownで日本語論文を書いてみよう
 jparmdのインストール
 research-compendium
 日本語論文をr-markdownで書いてみよう
-ウェブサイトやスライドを作ろう
+r-markdownでウェブサイトやスライドを作ろう
