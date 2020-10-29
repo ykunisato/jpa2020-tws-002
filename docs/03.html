@@ -210,9 +210,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="windows10がproエディションの場合の導入方法" class="section level2">
 <h2><span class="header-section-number">3.2</span> Windows10がProエディションの場合の導入方法</h2>
 <p>Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jbq4xfURMXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aStsqv2DpF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
+<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
@@ -220,9 +220,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="windows10がhomeエディションの場合の導入方法" class="section level2">
 <h2><span class="header-section-number">3.3</span> Windows10がHomeエディションの場合の導入方法</h2>
 <p>Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ji9yLpATm5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wLEZcc4erlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
+<p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
