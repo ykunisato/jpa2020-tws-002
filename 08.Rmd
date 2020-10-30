@@ -1,24 +1,3 @@
-# R Markdownで日本語論文を書いてみよう！
+# TWS: R Markdownで英語論文を書いてみよう！
 
-## jpaRmdのインストール
-
-以下の方法でjpaRmdのインストールをお願いいたします(dockerのykunisato/paper-rをお使いの場合は，既に入っています)。
-
-```{r eval=FALSE}
-# install.packages("remotes")
-remotes::install_github("ykunisato/jpaRmd")
-```
-
-## Research Compendium
-
-Research Compendiumを用意する場合は，以下のように実行します。
-
-```{r eval=FALSE}
-library(jpaRmd)
-set_rc_jpa("rmarkdown_for_reproducibility")
-```
-
-
-## 日本語論文をR Markdownで書いてみよう！
-
-TWS当日(2020/10/31(土) 10:00-12:00)に解説する方法にしたがって，jpaRmdのテンプレートを修正して，ご自身の論文をR Markdownで書いてみましょう！
+TWS当日(2020/10/31(土) 10:00-12:00)に解説します。

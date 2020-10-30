@@ -1,4 +1,15 @@
-# R Markdownでウェブサイトやスライドを作ろう!
+# TWS: R Markdownで日本語論文を書いてみよう！
 
-TWS当日(2020/10/31(土) 10:00-12:00)に解説します。
 
+
+```{r include=FALSE}
+library(zousan)
+```
+
+```{r}
+embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/09.html#1")
+```
+
+スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
+
+https://ykunisato.github.io/jpa2020-tws-kunisato/09.html#1
