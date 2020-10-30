@@ -15,3 +15,4 @@ embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1")
 
 https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1
 
+スライドの埋め込みには，zousanパッケージを使用しています(https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)。

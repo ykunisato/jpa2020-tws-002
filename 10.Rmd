@@ -14,3 +14,7 @@ embed_slide("https://ytake2.github.io/WritingArticlesInR/Slide_paper.html#1")
 
 
 https://ytake2.github.io/WritingArticlesInR/Slide_paper.html#1
+
+
+
+スライドの埋め込みには，zousanパッケージを使用しています(https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)。

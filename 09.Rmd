@@ -13,3 +13,6 @@ embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/09.html#1")
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
 https://ykunisato.github.io/jpa2020-tws-kunisato/09.html#1
+
+
+スライドの埋め込みには，zousanパッケージを使用しています(https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)。
