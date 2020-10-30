@@ -1,11 +1,8 @@
 # TWS: R Markdownでウェブサイトやスライドを作ろう!
 
-```{r include=FALSE}
+
+```{r echo=FALSE}
 library(zousan)
-```
-
-
-```{r}
 embed_slide("https://ytake2.github.io/RmarkdownExtra/RmarkdownExtra/Slide_extra.html#1")
 ```
 
@@ -18,4 +15,4 @@ https://ytake2.github.io/RmarkdownExtra/RmarkdownExtra/Slide_extra.html#1
 
 <br>
 <br>
-スライドの埋め込みには，zousanパッケージを使用しています(https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)。
+スライドの埋め込みには，[zousanパッケージ](https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)を使用しています。
