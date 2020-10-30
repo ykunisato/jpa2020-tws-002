@@ -1,4 +1,4 @@
-# TWS: R Markdownでウェブサイトやスライドを作ろう!
+# TWS: 再現可能な解析や論文執筆と環境構築
 
 
 ```{r include=FALSE}
