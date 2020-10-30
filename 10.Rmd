@@ -6,14 +6,14 @@ library(zousan)
 
 
 ```{r}
-embed_slide("https://ytake2.github.io/WritingArticlesInR/Slide_paper.html#1")
+embed_slide("https://ytake2.github.io/RmarkdownExtra/RmarkdownExtra/Slide_extra.html#1")
 ```
 
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
 
-https://ytake2.github.io/WritingArticlesInR/Slide_paper.html#1
+https://ytake2.github.io/RmarkdownExtra/RmarkdownExtra/Slide_extra.html#1
 
 
 <br>
