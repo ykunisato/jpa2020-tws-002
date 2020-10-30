@@ -48,7 +48,7 @@ The following package(s) will be updated in the lockfile:
 renv::snapshot()
 ```
 
-なお，新しいパッケージを追加せずに実行すると，以下のようになります。ちなみに，パッケージのバージョンなどのは，renv.lockファイルに記録されます。
+なお，新しいパッケージを追加せずに実行すると，以下のようになります。ちなみに，パッケージのバージョンなどは，renv.lockファイルに記録されます。
 
 ```
 > renv::snapshot()

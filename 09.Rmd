@@ -1,7 +1,5 @@
 # TWS: R Markdownで日本語論文を書いてみよう！
 
-
-
 ```{r echo=FALSE}
 library(zousan)
 embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/09.html#1")

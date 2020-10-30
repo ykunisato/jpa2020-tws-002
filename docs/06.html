@@ -158,7 +158,7 @@ The following package(s) will be updated in the lockfile:
 - bookdown    [* -&gt; 0.21]</code></pre>
 <p>なお，作業をしていて，パッケージが追加されたりしたら，以下を実行して，追加します。</p>
 <pre><code>renv::snapshot()</code></pre>
-<p>なお，新しいパッケージを追加せずに実行すると，以下のようになります。ちなみに，パッケージのバージョンなどのは，renv.lockファイルに記録されます。</p>
+<p>なお，新しいパッケージを追加せずに実行すると，以下のようになります。ちなみに，パッケージのバージョンなどは，renv.lockファイルに記録されます。</p>
 <pre><code>&gt; renv::snapshot()
 * The lockfile is already up to date.</code></pre>
 <p>上記のようにenv.lockファイルや関連するフォルダにパッケージの情報が記録されていれば，別の解析環境において，以下を実行することで，上記と全く同じバージョンのRパッケージを用意することができます。</p>

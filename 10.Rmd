@@ -1,6 +1,5 @@
 # TWS: R Markdownでウェブサイトやスライドを作ろう!
 
-
 ```{r echo=FALSE}
 library(zousan)
 embed_slide("https://ytake2.github.io/RmarkdownExtra/RmarkdownExtra/Slide_extra.html#1")
